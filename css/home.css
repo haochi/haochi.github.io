@@ -1,0 +1,36 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 250px 50px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 70px;
+  font-weight: normal;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+ul li:after {
+  content: "  \0b7  ";
+}
+ul li:last-of-type:after {
+  content: "";
+}
+abbr:hover {
+  cursor: help;
+}
