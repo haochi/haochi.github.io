@@ -8,7 +8,7 @@ Haochi Chen
 * software engineer
 * mustachian
 * minimalist
-* traveler
+* <a href="" ng-click="showCountriesVisited()">traveler</a>
 
 <!-- markdown dumb dumb -->
 

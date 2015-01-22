@@ -16,7 +16,7 @@
 
 {% raw %}
 <ul id="locations">
-  <li ng-repeat="location in locations">
+  <li ng-repeat="location in data.placesLived">
     <a href="#" ng-class="{active: location.current}" ng-click="showOnMap(location)">
         <span ng-if="location.current">&hearts;</span>
         {{ location.name }}

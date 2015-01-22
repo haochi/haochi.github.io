@@ -1,0 +1,47 @@
+{
+    "placesLived": [
+        {
+            "name": "columbus",
+            "latlng": {
+                "lat": 39.983333,
+                "lng": -82.983333
+            },
+            "zoom": 11
+        }, {
+            "name": "san francisco",
+            "latlng": {
+                "lat": 37.783333,
+                "lng": -122.416667
+            },
+            "zoom": 12
+        }, {
+            "name": "palo alto",
+            "latlng": {
+                "lat": 37.429167,
+                "lng": -122.138056
+            },
+            "zoom": 13,
+            "current": true
+        }
+    ],
+    "countriesVisited": [
+        "CN",
+        "HK",
+        "US",
+        "GB",
+        "FR",
+        "DE",
+        "CH",
+        "IT",
+        "AT",
+        "SG",
+        "TH",
+        "MY",
+        "MX",
+        "CA",
+        "EG",
+        "TR",
+        "HU",
+        "PL"
+    ]
+}
