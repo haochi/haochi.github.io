@@ -53,7 +53,7 @@ ihaochiApp.controller('HomeCtrl', ['$scope', '$http', 'homeDataService',
             });
 
             countriesVisitedInfoWindow = new google.maps.InfoWindow({
-                content: 'Countries visted!'
+                content: $scope.data.countriesVisited.length + ' countries visited and counting!'
             });
             
 
