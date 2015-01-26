@@ -1,0 +1,95 @@
+---
+# scss
+---
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline;
+
+        .active {
+          color: green;
+        }
+
+        &:after {
+          content: "  \0b7  ";
+        }
+
+        &:last-of-type:after {
+          content: "";
+        }
+    }
+}
+
+abbr:hover {
+  cursor: help;
+}
+
+#content {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+        $border-size: 3px;
+
+        display: inline;
+        font-weight: normal;
+        margin: 0;
+        border-bottom: $border-size solid #F5F7F5;
+    }
+}
+
+#locations {
+    li {
+        &:nth-child(1):after {
+            content: "\21d2";
+        }
+        &:nth-child(2):after {
+            content: "\21d4";
+        }
+    }
+}
+
+#map {
+    padding: 0;
+    width: 100%;
+    height: 50%;
+}
+
+@media (min-width: 960px) {
+    #content {
+        width: 50%;
+        float: left;
+        padding: 250px 0 0 0;
+        h1 {
+            font-size: 70px;
+        }
+    }
+
+    #map {
+        width: 50%;
+        height: 100%;
+    }
+}
