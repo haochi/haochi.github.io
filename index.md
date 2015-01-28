@@ -7,6 +7,7 @@ Haochi Chen
 
 * drinks milk
 * <a href="" ng-click="showCountriesVisited()">visits places</a>
+* twists balloon
 * writes code
 
 <!-- markdown dumb dumb -->
