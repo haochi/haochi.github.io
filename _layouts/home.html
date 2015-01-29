@@ -11,7 +11,7 @@
 </head>
 
 <body ng-controller="HomeCtrl">
-<div id="content">
+<div id="menu">
 {{ content }}
 
 {% raw %}
@@ -27,7 +27,17 @@
 
 </div>
 
-<div id="map"></div>
+<div id="content">
+    <div id="map" ng-show="section === 'map'"></div>
+    <div id="who" ng-show="section === 'who'">
+        <h1>Haochi-ism</h1>
+        <ol>
+            <li>I am not paying for that.</li>
+            <li>Someone has to do it.</li>
+        </ol>
+    </div>
+</div>
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8y1un491PQT-0ZcesQPmrc3grmx-BR_I"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
 <script type="text/javascript" src="/js/home.js"></script>

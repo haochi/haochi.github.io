@@ -22,6 +22,12 @@ ihaochiApp.controller('HomeCtrl', ['$scope', '$http', 'homeDataService',
     function ($scope, $http, placesLivedService) {
         var worldGeometry, countriesVisited, countriesVisitedInfoWindow;
 
+        $scope.section = 'map';
+
+        $scope.who = function () {
+            $scope.section = 'who';
+        }
+
         $scope.data = placesLivedService.fetchData(function () {
             countriesVisited = $scope.data.countriesVisited.map(function (countryCode) {
                 return "'" + countryCode + "'";
@@ -72,6 +78,7 @@ ihaochiApp.controller('HomeCtrl', ['$scope', '$http', 'homeDataService',
             countriesVisitedInfoWindow.setMap(null);
             map.setCenter(location.latlng);
             map.setZoom(location.zoom);
+            $scope.section = 'map';
         }
 
         $scope.showCountriesVisited = function () {
@@ -81,6 +88,7 @@ ihaochiApp.controller('HomeCtrl', ['$scope', '$http', 'homeDataService',
             countriesVisitedInfoWindow.setPosition(countriesVisitedCenter);
             map.setCenter(countriesVisitedCenter)
             map.setZoom(2);
+            $scope.section = 'map';
         }
     }
 ]);

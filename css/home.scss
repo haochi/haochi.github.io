@@ -1,6 +1,8 @@
 ---
 # scss
 ---
+$border-color: #C8C8C8;
+
 html,
 body {
     padding: 0;
@@ -14,10 +16,10 @@ body {
 }
 
 a {
-    color: black;
+    color: #F00;
     text-decoration: none;
     &:hover {
-        text-decoration: underline;
+        color: initial;
     }
 }
 
@@ -27,10 +29,6 @@ ul {
 
     li {
         display: inline;
-
-        .active {
-          color: green;
-        }
 
         &:after {
           content: "  \0b7  ";
@@ -42,22 +40,35 @@ ul {
     }
 }
 
-abbr:hover {
-  cursor: help;
+h1 {
+    margin: 0;
 }
 
-#content {
-    padding: 0;
+#who {
+    h1 {
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+#menu {
     text-align: center;
-    width: 100%;
+    width: 50%;
+    float: left;
+    padding: 250px 0 0 0;
 
     h1 {
         $border-size: 3px;
 
+        font-size: 4em;
         display: inline;
         font-weight: normal;
-        margin: 0;
-        border-bottom: $border-size solid #F5F7F5;
+        border-bottom: $border-size solid lighten($border-color, 15%);
+
+        a {
+            font-size: .3em;
+            vertical-align: top;
+        }
     }
 }
 
@@ -72,24 +83,32 @@ abbr:hover {
     }
 }
 
-#map {
+#content {
+    float: left;
+    width: 50%;
+    height: 100%;
     padding: 0;
-    width: 100%;
-    height: 50%;
 }
 
-@media (min-width: 960px) {
-    #content {
-        width: 50%;
-        float: left;
-        padding: 250px 0 0 0;
-        h1 {
-            font-size: 70px;
-        }
+#map {
+    height: 100%;
+}
+
+
+@media (max-width: 960px) {
+    #menu, #content {
+        float: none;
+        width: 100%;
+        height: 50%;
     }
 
-    #map {
-        width: 50%;
-        height: 100%;
+    #menu {
+        padding: 0;
+        h1 {
+            font-size: 2em;
+            a {
+                font-size: .5em;
+            }
+        }
     }
 }
