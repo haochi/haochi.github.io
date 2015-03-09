@@ -72,6 +72,41 @@ h1 {
     }
 }
 
+#projects {
+    h4, ul {
+        display: inline;
+    }
+    .project {
+        position: relative;
+
+        &.project-morgan {
+            .project-description {
+                width: 200px;
+                right: -60px;
+            }
+        }
+
+        &.project-ynabweb {
+            .project-description {
+                width: 230px;
+                right: -80px;
+            }
+        }
+
+        .project-description {
+            display: none;
+            color: green;
+        }
+
+        .project-name:active + .project-description,
+        .project-name:hover + .project-description {
+            display: block;
+            position: absolute;
+            top: -18px;
+        }
+    }
+}
+
 #locations {
     li {
         &:nth-child(1):after {
@@ -91,8 +126,11 @@ h1 {
     height: 100%;
 }
 
-
 @media (max-width: 960px) {
+    #map {
+        display: none;
+    }
+
     #menu, #content {
         float: none;
         width: 100%;
