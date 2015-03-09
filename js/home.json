@@ -8,19 +8,12 @@
             },
             "zoom": 11
         }, {
-            "name": "san francisco",
+            "name": "sf bay area",
             "latlng": {
-                "lat": 37.783333,
-                "lng": -122.416667
+                "lat": 37.6229442,
+                "lng": -122.4223974
             },
-            "zoom": 12
-        }, {
-            "name": "palo alto",
-            "latlng": {
-                "lat": 37.429167,
-                "lng": -122.138056
-            },
-            "zoom": 13,
+            "zoom": 11,
             "current": true
         }
     ],
