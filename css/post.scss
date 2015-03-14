@@ -1,0 +1,83 @@
+---
+# scss
+---
+$breakpoint: 768px;
+$main-margin: 20px;
+$link-color: darken(#64FF3D, 30%);
+$code-bg: #F9F9F9;
+$code-color: #D14;
+$content-color: #515151;
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: darken($link-color, 10%);
+        text-decoration: underline;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: $breakpoint - $main-margin * 2;
+}
+
+.main {
+    color: $content-color;
+    .title {
+        font-size: 1.8em;
+    }
+
+    .content {
+        line-height: 1.4em;
+    }
+
+    .meta {
+        color: #999;
+    }
+
+    pre, code {
+        background: $code-bg;
+    }
+    pre {
+        padding: 1em;
+    }
+    code {
+        &:not([data-lang]) {
+            color: $code-color;
+        }
+        padding: 0.4em 0.2em 0.1em;
+    }
+}
+
+.simple-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav {
+    margin-bottom: $main-margin;
+    border-top: 1px dashed #EAEAEA;
+
+    ul.links {
+        li {
+            display: inline;
+            &:not(:last-child):after {
+                content: ' \0B7 ';
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint) {
+    .container {
+        width: auto;
+        margin: 0 $main-margin;
+    }
+}

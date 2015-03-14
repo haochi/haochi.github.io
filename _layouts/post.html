@@ -1,0 +1,22 @@
+{% include minimalistic_head.html %} 
+
+<div class="main">
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="content">{{ content }}</div>
+    <div class="meta">
+        <p>
+            <time datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time> &middot;
+            <a href="http://twitter.com/{{ site.twitter_name }}">@{{ site.twitter_name }}</a>
+        </p>
+    </div>
+</div>
+
+<nav>
+    <ul class="links simple-list">
+        <li><a href="/archive.html">back to articles list</a></li>
+        <li><a href="{{ site.repository }}/tree/master/{{ page.path }}">source</a></li>
+        <li><a href="{{ site.repository }}/commits/master/{{ page.path }}">history</a></li>
+    </ul>
+</nav>
+
+{% include minimalistic_foot.html %} 

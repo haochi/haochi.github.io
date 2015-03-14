@@ -5,13 +5,12 @@ layout: home
 Haochi Chen<a href="" ng-click="who()">who?</a>
 ===========
 
-* drinks milk
+* [writes words](/archive.html)
+* [writes code](//github.com/haochi){:target="_blank"}
 * <a href="" ng-click="showCountriesVisited()">visits places</a>
 * twists balloon
-* [writes code](//github.com/haochi){:target="_blank"}
 
 <!-- markdown dumb dumb -->
-
 
 <div id="projects">
     <span>recent projects:</span>

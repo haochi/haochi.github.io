@@ -1,8 +1,11 @@
 # Site settings
 title: iHaochi
+author: Haochi Chen
 description: If you are looking for Haochi, you have found him.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ihaochi.com" # the base hostname & protocol for your site
+repository: "http://github.com/haochi/haochi.github.io"
+twitter_name: haochi
 
 # Build settings
 markdown: kramdown
