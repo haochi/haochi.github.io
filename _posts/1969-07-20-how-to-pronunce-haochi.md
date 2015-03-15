@@ -35,6 +35,6 @@ Thanks Unilever, I am hungry already!
 Oh yes. My mother tongue is a dialect of [Cantonese](https://en.wikipedia.org/wiki/Taishanese){:target="_blank"} called [Taishanese](https://en.wikipedia.org/wiki/Taishanese){:target="_blank"}.
 So the way I pronounce "Haochi" is not in the usual Mandarian pronunciation, but in a somewhat Americanized version of 浩驰 in Taishanese.
 
-Essentially it's the same as "Ho Chi Minh" without the "Minh" part, or something between `/hoʊ tʃiː/` and `/həʊ tʃiː/` for the IPA-inclined.
+Essentially it's the same as "Ho Chi Minh" without the "Minh" part, or somewhere between `/hoʊ tʃiː/` and `/həʊ tʃiː/` for the IPA-inclined.
 
 *[IPA]: International Phonetic Alphabet
