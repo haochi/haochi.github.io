@@ -4,6 +4,7 @@
 $breakpoint: 768px;
 $main-margin: 20px;
 $link-color: darken(#64FF3D, 30%);
+$some-gray: #999;
 $code-bg: #F9F9F9;
 $code-color: #D14;
 $content-color: #515151;
@@ -39,7 +40,7 @@ a {
     }
 
     .meta {
-        color: #999;
+        color: $some-gray;
     }
 
     pre, code {
@@ -61,6 +62,12 @@ a {
     }
     img {
         max-width: 100%;
+    }
+    abbr {
+        border-bottom: 1px dotted $some-gray; // chrome doesn't underline it
+        &:hover {
+            border-bottom-color: $code-color;
+        }
     }
 }
 
