@@ -5,7 +5,7 @@ layout: home
 Haochi Chen<a href="" ng-click="who()">who?</a>
 ===========
 
-* [writes words](/archive.html)
+* [still blogs](/blog)
 * [writes code](//github.com/haochi){:target="_blank"}
 * <a href="" ng-click="showCountriesVisited()">visits places</a>
 * twists balloon
