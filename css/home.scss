@@ -105,7 +105,6 @@ h1 {
             color: green;
         }
 
-        .project-name:active + .project-description,
         .project-name:hover + .project-description {
             display: block;
             position: absolute;
