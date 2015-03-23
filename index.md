@@ -15,6 +15,10 @@ Haochi Chen<a href="" ng-click="who()">who?</a>
 <div id="projects">
     <span>recent projects:</span>
     <ul>
+        <li class="project project-sanfranshitsco">
+            <a href="//github.com/haochi/san-franshitsco" class="project-name">san franshitsco</a>
+            <div class="project-description">poop map of san francisco</div>
+        </li>
         <li class="project project-morgan">
             <a href="//github.com/haochi/morgan" class="project-name">morgan</a>
             <div class="project-description">personal management app</div>

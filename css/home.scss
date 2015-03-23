@@ -79,6 +79,13 @@ h1 {
     .project {
         position: relative;
 
+        &.project-sanfranshitsco {
+            .project-description {
+                width: 200px;
+                right: -60px;
+            }
+        }
+
         &.project-morgan {
             .project-description {
                 width: 200px;
