@@ -3,7 +3,7 @@ layout: post
 title: How to Pronunce Haochi
 ---
 
-**tl;dr**: Haochi pronounces "Haochi" as `/həʊ tʃiː/` in IPA and `/hō chē/` in AHD representation.
+**tl;dr**: Haochi pronounces "Haochi" as `/hoʊ tʃiː/` in IPA and `/hō chē/` in AHD representation.
 
 ### Mandarin
 
