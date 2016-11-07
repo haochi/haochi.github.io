@@ -13,6 +13,13 @@
                 "lat": 37.6229442,
                 "lng": -122.4223974
             },
+            "zoom": 11
+        }, {
+            "name": "buenos aires",
+            "latlng": {
+                "lat": -34.603333,
+                "lng": -58.381667
+            },
             "zoom": 11,
             "current": true
         }
@@ -40,6 +47,7 @@
         "CZ",
         "AR",
         "IE",
-        "BR"
+        "BR",
+        "UY"
     ]
 }
