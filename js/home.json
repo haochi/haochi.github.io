@@ -8,20 +8,20 @@
             },
             "zoom": 11
         }, {
-            "name": "sf bay area",
+            "name": "san francisco",
             "latlng": {
                 "lat": 37.6229442,
                 "lng": -122.4223974
             },
-            "zoom": 11
+            "zoom": 11,
+            "current": true
         }, {
             "name": "buenos aires",
             "latlng": {
                 "lat": -34.603333,
                 "lng": -58.381667
             },
-            "zoom": 11,
-            "current": true
+            "zoom": 11
         }
     ],
     "countriesVisited": [
