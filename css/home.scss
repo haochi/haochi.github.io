@@ -113,14 +113,6 @@ h1 {
     }
 }
 
-#locations {
-    li {
-        &:nth-child(1):after {
-            content: "\21d2";
-        }
-    }
-}
-
 #content {
     float: left;
     width: 50%;
