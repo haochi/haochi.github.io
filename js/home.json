@@ -13,8 +13,7 @@
                 "lat": 37.6229442,
                 "lng": -122.4223974
             },
-            "zoom": 11,
-            "current": true
+            "zoom": 11
         }, {
             "name": "buenos aires",
             "latlng": {
@@ -22,6 +21,14 @@
                 "lng": -58.381667
             },
             "zoom": 11
+        }, {
+            "name": "new york",
+            "latlng": {
+                "lat": 40.759031,
+                "lng": -73.981603
+            },
+            "zoom": 13,
+            "current": true
         }
     ],
     "countriesVisited": [
