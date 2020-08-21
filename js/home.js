@@ -2,94 +2,32 @@ var ihaochiApp = angular.module('ihaochiApp', []);
 
 ihaochiApp.factory('homeDataService', ['$http', function ($http) {
     var service = {};
+
     service.data = {
-        placesLived: [],
-        countriesVisited: []
+        placesLived: []
     };
     
-    service.fetchData = function (callback) {
-        $http.get('/js/home.json').then(function (response) {
-            angular.extend(service.data, response.data);
-            callback();
+    service.fetchData = function () {
+        return $http.get('/js/home.json').then(function (response) {
+            return angular.extend(service.data, response.data);
         });
-        
-        return service.data;
     }
     return service;
 }]);
 
-ihaochiApp.controller('HomeCtrl', ['$scope', '$http', 'homeDataService',
-    function ($scope, $http, placesLivedService) {
-        var worldGeometry, countriesVisited, countriesVisitedInfoWindow;
+ihaochiApp.controller('HomeCtrl', ['$scope', 'homeDataService',
+    function ($scope, placesLivedService) {
+        $scope.pastResidences = [];
+        $scope.currentResidence = {};
 
-        $scope.section = 'map';
-
-        $scope.who = function () {
-            $scope.section = 'who';
-        }
-
-        $scope.data = placesLivedService.fetchData(function () {
-            countriesVisited = $scope.data.countriesVisited.map(function (countryCode) {
-                return "'" + countryCode + "'";
+        placesLivedService.fetchData().then(function (data) {
+            $scope.pastResidences = data.placesLived.filter(function (location) {
+                return !location.current;
             });
-
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 0, lng: 0 },
-                zoom: 1
-            });
-
-            worldGeometry = new google.maps.FusionTablesLayer({
-                query: {
-                    select: 'geometry',
-                    from: '1N2LBk4JHwWpOY4d9fobIn27lfnZ5MDy-NoqqRpk',
-                    where: "ISO_2DIGIT IN (" + countriesVisited.join(',') + ")"
-                },
-                styles: [
-                    {
-                        polygonOptions: {
-                            fillColor: "#ED4337",
-                            strokeColor: "#ED4337"
-                        },
-                        polylineOptions: {
-                            strokeColor: "#ED4337"
-                        }
-                    }
-                ],
-                suppressInfoWindows: true
-            });
-
-            countriesVisitedInfoWindow = new google.maps.InfoWindow({
-                content: $scope.data.countriesVisited.length + ' countries visited and counting!'
-            });
-            
-
-            $scope.showOnMap($scope.currentResidence());
-        });
-
-
-        $scope.currentResidence = function () {
-            return $scope.data.placesLived.filter(function (location) {
+            $scope.currentResidence = data.placesLived.filter(function (location) {
                 return location.current;
             })[0];
-        };
-
-        $scope.showOnMap = function (location) {
-            worldGeometry.setMap(null);
-            countriesVisitedInfoWindow.setMap(null);
-            map.setCenter(location.latlng);
-            map.setZoom(location.zoom);
-            $scope.section = 'map';
-        }
-
-        $scope.showCountriesVisited = function () {
-            var countriesVisitedCenter = {lat: 33, lng: -3 };
-            worldGeometry.setMap(map);
-            countriesVisitedInfoWindow.setMap(map);
-            countriesVisitedInfoWindow.setPosition(countriesVisitedCenter);
-            map.setCenter(countriesVisitedCenter)
-            map.setZoom(2);
-            $scope.section = 'map';
-        }
+        });
     }
 ]);
 

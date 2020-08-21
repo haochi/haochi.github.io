@@ -5,41 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ site.description }}">
   <title>{{ site.title }}</title>
-
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css">
   <link rel="stylesheet" href="/css/home.css" type="text/css">
 </head>
 
 <body ng-controller="HomeCtrl">
-<div id="menu">
+<div id="content">
 {{ content }}
 
 {% raw %}
+<h4 id="locations-heading">called these places home</h4>
 <ul id="locations">
-  <li ng-repeat="location in data.placesLived">
-    <a href="#" ng-class="{active: location.current}" ng-click="showOnMap(location)">
-        <span ng-if="location.current">&hearts;</span>
-        {{ location.name }}
+  <li ng-repeat="location in pastResidences">
+    <a ng-href="{{location.wikipedia}}" target="_blank">
+      {{ location.name }}
     </a>
   </li>
 </ul>
+<p>
+  currently in 
+  <a ng-href="{{currentResidence.wikipedia}}" target="_blank">
+    {{ currentResidence.name }}
+  </a>
+  &#10084;&#65039; &#128509;
+</p>
 {% endraw %}
 
 </div>
 
-<div id="content">
-    <div id="map" ng-show="section === 'map'"></div>
-    <div id="who" ng-show="section === 'who'">
-        <h1>Haochi-ism</h1>
-        <ol>
-            <li>I am not paying for that.</li>
-            <li>Someone has to do it.</li>
-        </ol>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsduO715MGz0asWUbZfkqGo3EyObWpY-0"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 <script type="text/javascript" src="/js/home.js"></script>
 </body>
 

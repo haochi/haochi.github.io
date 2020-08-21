@@ -1,65 +1,24 @@
 {
     "placesLived": [
         {
+            "name": "taishan",
+            "wikipedia": "https://en.wikipedia.org/wiki/Taishan,_Guangdong"
+        }, {
             "name": "columbus",
-            "latlng": {
-                "lat": 39.983333,
-                "lng": -82.983333
-            },
-            "zoom": 11
+            "wikipedia": "https://en.wikipedia.org/wiki/Columbus,_Ohio"
         }, {
             "name": "san francisco",
-            "latlng": {
-                "lat": 37.6229442,
-                "lng": -122.4223974
-            },
-            "zoom": 11
+            "wikipedia": "https://en.wikipedia.org/wiki/San_Francisco"
+        }, {
+            "name": "limerick",
+            "wikipedia": "https://en.wikipedia.org/wiki/Limerick"
         }, {
             "name": "buenos aires",
-            "latlng": {
-                "lat": -34.603333,
-                "lng": -58.381667
-            },
-            "zoom": 11
+            "wikipedia": "https://en.wikipedia.org/wiki/Buenos_Aires"
         }, {
             "name": "new york",
-            "latlng": {
-                "lat": 40.759031,
-                "lng": -73.981603
-            },
-            "zoom": 13,
+            "wikipedia": "https://en.wikipedia.org/wiki/New_York_City",
             "current": true
         }
-    ],
-    "countriesVisited": [
-        "CN",
-        "HK",
-        "US",
-        "GB",
-        "FR",
-        "DE",
-        "CH",
-        "IT",
-        "AT",
-        "SG",
-        "TH",
-        "MY",
-        "MX",
-        "CA",
-        "EG",
-        "TR",
-        "HU",
-        "PL",
-        "NL",
-        "CZ",
-        "AR",
-        "IE",
-        "BR",
-        "UY",
-        "CL",
-        "DK",
-        "SE",
-        "KR",
-        "JP"
     ]
 }
