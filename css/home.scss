@@ -18,31 +18,6 @@ body {
     display: flex;
 }
 
-a {
-    color: #F00;
-    text-decoration: none;
-    &:hover {
-        color: initial;
-    }
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-
-    li {
-        display: inline;
-
-        &:after {
-          content: "  \0b7  ";
-        }
-
-        &:last-of-type:after {
-          content: "";
-        }
-    }
-}
-
 h1 {
     margin: 0;
 }
@@ -64,8 +39,4 @@ h1 {
             vertical-align: top;
         }
     }
-}
-
-#locations-heading {
-    margin-bottom: 0;
 }
