@@ -4,7 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/css/home.css" type="text/css">
+  <style>
+html {
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    border: 10px solid skyblue;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  </style>
 </head>
 
 <body>

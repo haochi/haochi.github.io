@@ -2,5 +2,5 @@
 layout: home
 ---
 
-Haochi Chen
+Haochi
 ===========
