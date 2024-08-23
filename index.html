@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iHaochi</title>
+<style>
+html {
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+}
+
+
+#haochi {
+    font-size: 2em;
+    font-weight: 400;
+    animation: spin 12s cubic-bezier(0.31, -0.18, 0, 0.5) infinite;
+    padding: 0;
+    margin: 0;
+}
+
+.border {
+    border-radius: 10px;
+    padding: 10px;
+}
+body > .border {
+    border-radius: 0;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  </style>
+</head>
+<body>
+<p id="haochi">Haochi</p>
+
+<script>
+    const degrees = 360;
+    const containers = 12;
+    const borderWidth = 10;
+    const framesPerSecond = 2;
+    
+    const haochi = document.getElementById("haochi");
+    haochi.style.height = `calc(100vh - 2 * ${containers} * ${borderWidth}px)`;
+
+    for (let i = 0; i < containers; i++) {
+        const parent = haochi.parentElement;
+        const div = document.createElement("div");
+        div.classList.add("border");
+        div.appendChild(haochi);
+        parent.appendChild(div);
+    }
+
+    const backgroundColor = (index) => {
+        const degree = (index * borderWidth) % degrees;
+        return `hsl(${degree} 80% 40%)`;
+    }
+
+    let iteration = 0;
+    const step = () => {
+        iteration++;
+        document.querySelectorAll("div").forEach((div, i) => {
+            const degree = (((i + iteration)) * borderWidth) % degrees;
+            div.style.backgroundColor = backgroundColor(i + iteration);
+        });
+    };
+    step();
+    setInterval(step, 1000 / framesPerSecond);
+</script>
+</body>
+</html>
