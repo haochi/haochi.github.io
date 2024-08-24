@@ -18,6 +18,7 @@ html {
 body {
     margin: 0;
     color: #fff;
+    overflow-y: hidden;
 }
 
 
@@ -51,15 +52,15 @@ body > .border {
 <marquee id="haochi" behavior="alternate">Haochi</marquee>
 
 <script>
-    const degrees = 360;
-    const containers = 12;
-    const borderWidth = 10;
-    const framesPerSecond = 2;
+    const CIRCLE_DEGREES = 360;
+    const CONTAINERS = 12;
+    const BORDER_WIDTH = 10;
+    const FRAMES_PER_SECOND = 2;
     
     const haochi = document.getElementById("haochi");
-    haochi.style.height = `calc(100vh - 2 * ${containers} * ${borderWidth}px)`;
+    haochi.style.height = `calc(100vh - 2 * ${CONTAINERS} * ${BORDER_WIDTH}px)`;
 
-    for (let i = 0; i < containers; i++) {
+    for (let i = 0; i < CONTAINERS; i++) {
         const parent = haochi.parentElement;
         const div = document.createElement("div");
         div.classList.add("border");
@@ -68,21 +69,26 @@ body > .border {
     }
 
     const backgroundColor = (index) => {
-        const degree = (index * borderWidth) % degrees;
+        const degree = (index * BORDER_WIDTH) % CIRCLE_DEGREES;
         return `hsl(${degree} 80% 40%)`;
     }
 
-    let iteration = 0;
+    let iteration = Math.round(Math.random() * CIRCLE_DEGREES);
     const step = () => {
-        iteration++;
-        document.body.style.backgroundColor = backgroundColor(iteration);
-        document.querySelectorAll("div").forEach((div, i) => {
-            const degree = (((i + iteration)) * borderWidth) % degrees;
-            div.style.backgroundColor = backgroundColor(i + iteration);
-        });
+        setTimeout(() => {
+            if (document.hidden) {
+                return;
+            }
+            iteration++;
+            document.body.style.backgroundColor = backgroundColor(iteration);
+            document.querySelectorAll("div").forEach((div, i) => {
+                div.style.backgroundColor = backgroundColor(i + iteration);
+            });
+            requestAnimationFrame(step);
+        }, 1000 / FRAMES_PER_SECOND);
     };
     step();
-    setInterval(step, 1000 / framesPerSecond);
+    requestAnimationFrame(step);
 </script>
 </body>
 </html>
