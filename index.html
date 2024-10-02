@@ -49,7 +49,9 @@ body > .border {
   </style>
 </head>
 <body>
-<marquee id="haochi" behavior="alternate">Haochi</marquee>
+<marquee id="haochi" behavior="alternate" direction="down">
+    <marquee behavior="alternate">Haochi</marquee>
+</marquee>
 
 <script>
     const CIRCLE_DEGREES = 360;
@@ -76,14 +78,13 @@ body > .border {
     let iteration = Math.round(Math.random() * CIRCLE_DEGREES);
     const step = () => {
         setTimeout(() => {
-            if (document.hidden) {
-                return;
+            if (!document.hidden) {
+                iteration++;
+                document.body.style.backgroundColor = backgroundColor(iteration);
+                document.querySelectorAll("div").forEach((div, i) => {
+                    div.style.backgroundColor = backgroundColor(i + iteration);
+                });
             }
-            iteration++;
-            document.body.style.backgroundColor = backgroundColor(iteration);
-            document.querySelectorAll("div").forEach((div, i) => {
-                div.style.backgroundColor = backgroundColor(i + iteration);
-            });
             requestAnimationFrame(step);
         }, 1000 / FRAMES_PER_SECOND);
     };
